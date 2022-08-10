@@ -1,5 +1,5 @@
-FROM tomcat9
-COPY 1.html /opt/tomcat9/webapps
-EXPOSE 85
-CMD ["/opt/tomcat9/bin/catalina.sh", "run"]
+FROM tomcat:9
+COPY SampleWebApp.war /usr/local/tomcat/webapps
+
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 
